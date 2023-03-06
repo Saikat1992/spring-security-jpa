@@ -25,4 +25,11 @@ pipeline
             }
         }
     }
+    post
+    {
+      always
+        {
+         emailext body: 'Summary', subject: 'Pipeline status', to: 'saikat.sarangi@gmail.com'
+        }
+    }
 }
